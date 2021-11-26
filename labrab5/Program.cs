@@ -445,8 +445,6 @@ namespace labrab5
             int check = 1;  int action;game a=new game();
             while (check == 1)
             {
-                
-                
                     Console.WriteLine("Выберите, что вы хотите сделать\n1)Ввести данные матча\n2)Изменить название лиги\n3)Изменить команду - хозяев\n4)Изменить команду - гостей\n5)Изменить результат матча\n6)Вывести данные матча\n");
                 action = Convert.ToInt32(Console.ReadLine());
                 if (action == 1)
@@ -490,10 +488,6 @@ namespace labrab5
                 check = Convert.ToInt32(Console.ReadLine());
             }
         }
-
-
-
-
         static void Main(string[] args)
         {
             int mode; int check = 1;
@@ -524,9 +518,6 @@ namespace labrab5
                 Console.WriteLine("Вы хотите продолжить? 1 - да, 0 - нет ");
                 check = Convert.ToInt32(Console.ReadLine());
             }
-
-
-
             Console.ReadKey();
         }
     }

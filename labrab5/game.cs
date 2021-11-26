@@ -6,14 +6,11 @@ namespace labrab5
 {
 	public class game
 	{
-
 		private string league_name;
 		private string home_team;
 		private string visitor_team;
 		private string result;
 		//////////////////////////func
-
-
 		public game() { }
 		public game(string name, string rez, string vis, string home)
 		{

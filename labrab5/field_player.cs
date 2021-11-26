@@ -93,7 +93,5 @@ namespace labrab5
 		public int return_height() { return height; }
 		//~field_player();
 		public void vivod() { Console.WriteLine( name+" "+ nation+" "+ age+" "+ games+" "+ goals+" "+ assists+" "+ red_cards+" "+ yellow_cards+" "+ position+" "+ weight+" "+ height+"\n"); }
-
-
 	}
 }
