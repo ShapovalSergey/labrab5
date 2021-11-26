@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using System.Text;
 namespace labrab5
 {
-    class league
-    {
-		
+	public class league
+	{
+
 		private string name;
 		private int value_of_teams;
 		private string years;
 		private string location;
 		private team tm;
 		//////////////////////////func
-			public void Addteam(team a)
-			{
-			tm=a;
-			}
+		public void Addteam(team a)
+		{
+			tm = a;
+		}
 		public league() { }
+
+		
 		public league(string name1, int value_of_teams1, string  years1, string location1)
 		{
 			name = name1;

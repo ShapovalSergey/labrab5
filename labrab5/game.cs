@@ -4,7 +4,7 @@ using System.Text;
 
 namespace labrab5
 {
-	class game
+	public class game
 	{
 
 		private string league_name;

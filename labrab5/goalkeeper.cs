@@ -4,7 +4,7 @@ using System.Text;
 
 namespace labrab5
 {
-    class goalkeeper
+   public class goalkeeper
     {
 		private string name;
 		private int age;

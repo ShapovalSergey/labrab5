@@ -4,7 +4,7 @@ using System.Text;
 
 namespace labrab5
 {
-    class team
+   public class team
     {
 		
 	private string name;
