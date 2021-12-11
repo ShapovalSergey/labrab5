@@ -14,31 +14,31 @@ namespace labrab5
 		public game() { }
 		public game(string name, string rez, string vis, string home)
 		{
-			league_name = name;
-			home_team = home;
-			visitor_team = vis;
-			result = rez;
+			League_name = name;
+			Home_team = home;
+			Visitor_team = vis;
+			Result = rez;
 		}
-		public void change_name(string name1)
+		public string League_name
 		{
-			league_name = name1;
+			set { league_name = value; }
+			get { return league_name; }
 		}
-		public void change_home_team(string home_team1)
+		public string Home_team
 		{
-			home_team = home_team1;
+			set { home_team = value; }
+			get { return home_team; }
 		}
-		public void change_visitor_team(string visitor_team1)
+		public string Visitor_team
 		{
-			visitor_team = visitor_team1;
+			set { visitor_team = value; }
+			get { return visitor_team; }
 		}
-		public void change_result(string result1)
+		public string Result
 		{
-			result = result1;
+			set { result = value; }
+			get { return result; }
 		}
-		public string return_name() { return league_name; }
-		public string return_home_team() { return home_team; }
-		public string return_visitor_team() { return visitor_team; }
-		public string return_result() { return result; }
 		public void vivod() { Console.WriteLine(league_name + " " + home_team + " " + result + " " + visitor_team + "\n"); }
 	}
 }

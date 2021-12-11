@@ -121,16 +121,16 @@ namespace labrab5
             string im;
             Console.WriteLine("Введите название лиги\n");
             im = Console.ReadLine();
-            a.change_name(im);
+            a.League_name=im;
             Console.WriteLine("Введите команду - хозяев\n");
             im = Console.ReadLine();
-            a.change_home_team(im);
+            a.Home_team=im;
             Console.WriteLine("Введите команду - гостей\n");
             im = Console.ReadLine();
-            a.change_visitor_team(im);
+            a.Visitor_team=im;
             Console.WriteLine("Введите результат матч\n");
             im = Console.ReadLine();
-            a.change_result(im);
+            a.Result=im;
         }
 
         public static void func1()
@@ -456,28 +456,28 @@ namespace labrab5
                         string im;
                         Console.WriteLine("Введите название лиги\n");
                     im = Console.ReadLine();
-                    a.change_name(im);
+                    a.League_name=im;
                     }
                     if (action == 3)
                     {
                         string im;
                         Console.WriteLine("Введите команду - хозяев\n");
                     im = Console.ReadLine();
-                    a.change_home_team(im);
+                    a.Home_team=im;
                     }
                     if (action == 4)
                     {
                         string im;
                         Console.WriteLine("Введите команду - гостей\n");
                         im=Console.ReadLine();
-                        a.change_visitor_team(im);
+                        a.Visitor_team=im;
                     }
                     if (action == 5)
                     {
                         string im;
                         Console.WriteLine("Введите результат матч\n");
                        im =Console.ReadLine();
-                        a.change_result(im);
+                        a.Result=im;
                     }
                     if (action == 6)
                     {
