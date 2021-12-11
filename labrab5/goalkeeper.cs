@@ -23,73 +23,127 @@ namespace labrab5
 		public goalkeeper() { }
 		public goalkeeper(string name1, int age1, int games1, int goals1, int assists1, int red1, int yellow1, int missed_balls1, string nation1, int weig1, int heig1)
 		{
-			name = name1;
-			nation = nation1;
-			age = age1;
-			games = games1;
-			goals = goals1;
-			assists = assists1;
-			red_cards = red1;
-			yellow_cards = yellow1;
-			missed_balls = missed_balls1;
-			weight = weig1;
-			height = heig1;
+			Name = name1;
+			Nation = nation1;
+			Age = age1;
+			Games = games1;
+			Goals = goals1;
+			Assists = assists1;
+			Red_cards = red1;
+			Yellow_cards = yellow1;
+			Missed_balls = missed_balls1;
+			Weight = weig1;
+			Height = heig1;
 		}
-		public void change_name(string name1)
+		public int Age
 		{
-			name = name1;
+			set
+			{
+				if (value < 16)
+					Console.WriteLine("Возраст не может быть меньше 16");
+				else
+					age = value;
+			}
+			get { return age; }
 		}
-		public void change_missed_balls(int missed_balls1)
+		public int Games
 		{
-			missed_balls = missed_balls1;
+			set
+			{
+				if (value < 0)
+					Console.WriteLine("Количество матчей не может быть отрицательным числом");
+				else
+					games = value;
+			}
+			get { return games; }
 		}
-		public void change_nation(string nation1)
+		public int Goals
 		{
-			nation = nation1;
+			set
+			{
+				if (value < 0)
+					Console.WriteLine("Голы не могут быть отрицательным числом");
+				else
+					goals = value;
+			}
+			get { return goals; }
 		}
-		public void change_games(int games1)
+		public int Assists
 		{
-			games = games1;
+			set
+			{
+				if (value < 0)
+					Console.WriteLine("Ассисты не могут быть отрицательным числом");
+				else
+					assists = value;
+			}
+			get { return assists; }
 		}
-		public void change_goals(int goals1)
+		public int Red_cards
 		{
-			goals = goals1;
+			set
+			{
+				if (value < 0)
+					Console.WriteLine("Количество красных карточек не может быть отрицательным числом");
+				else
+					red_cards = value;
+			}
+			get { return red_cards; }
 		}
-		public void change_age(int age1)
+		public int Yellow_cards
 		{
-			age = age1;
+			set
+			{
+				if (value < 0)
+					Console.WriteLine("Количество желтых карточек не может быть отрицательным числом");
+				else
+					yellow_cards = value;
+			}
+			get { return yellow_cards; }
 		}
-		public void change_red_cards(int red_cards1)
+		public int Missed_balls
 		{
-			red_cards = red_cards1;
+			set
+			{
+				if (value < 0)
+					Console.WriteLine("Количество пропущенных мячей не может быть отрицательным числом");
+				else
+					missed_balls = value;
+			}
+			get { return missed_balls; }
 		}
-		public void change_yellow_cards(int yellow_cards1)
+		public int Weight
 		{
-			yellow_cards = yellow_cards1;
+			set
+			{
+				if (value < 0)
+					Console.WriteLine("Вес не может быть отрицательным числом");
+				else
+					weight = value;
+			}
+			get { return weight; }
 		}
-		public void change_weight(int weight1)
+		public int Height
 		{
-			weight = weight1;
+			set
+			{
+				if (value < 0)
+					Console.WriteLine("Рост не может быть отрицательным числом");
+				else
+					height = value;
+			}
+			get { return height; }
 		}
-		public void change_height(int height1)
+		public string Name
 		{
-			height = height1;
+			set { name = value; }
+			get { return name; }
 		}
-		public void change_assists(int assists1)
+		public string Nation
 		{
-			assists = assists1;
+			set { nation = value; }
+			get { return nation; }
 		}
-		public string return_name() { return name; }
-		public string return_nation() { return nation; }
-		public int return_age() { return age; }
-		public int return_games() { return games; }
-		public int return_goals() { return goals; }
-		public int return_assists() { return assists; }
-		public int return_red_cards() { return red_cards; }
-		public int return_yellow_cards() { return yellow_cards; }
-		public int return_missed_balls() { return missed_balls; }
-		public int return_weight() { return weight; }
-		public int return_height() { return height; }
 		//~field_player();
 		public void vivod() { Console.WriteLine(name + " " + nation + " " + age + " " + games + " " + goals + " " + assists + " " + red_cards + " " + yellow_cards + " " + missed_balls + " " + weight + " " + height + "\n"); }
 	}
