@@ -26,7 +26,7 @@ namespace labrab5
 			Name = name1;
 			Nation = nation1;
 			Age = age1;
-			Games = games1;
+			//Games = games1;
 			Goals = goals1;
 			Assists = assists1;
 			Red_cards = red1;
@@ -145,6 +145,6 @@ namespace labrab5
 			get { return nation; }
 		}
 		//~field_player();
-		public void vivod() { Console.WriteLine(name + " " + nation + " " + age + " " + games + " " + goals + " " + assists + " " + red_cards + " " + yellow_cards + " " + missed_balls + " " + weight + " " + height + "\n"); }
+		public void vivod() { Console.WriteLine(name + " " + nation + " " + age + "  " + goals + " " + assists + " " + red_cards + " " + yellow_cards + " " + missed_balls + " " + weight + " " + height + "\n"); }
 	}
 }

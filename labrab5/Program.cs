@@ -86,34 +86,34 @@ namespace labrab5
             string im, loc; int i; string pos;
             Console.WriteLine("Введите имя полевого игрока\n");
             im = Console.ReadLine();
-            a.change_name(im);
+            a.Name=im;
             Console.WriteLine("Введите возраст\n");
             i = Convert.ToInt32(Console.ReadLine());
-            a.change_age(i);
+            a.Age=i;
             Console.WriteLine("Введите количество голов полевого игрока\n");
             i = Convert.ToInt32(Console.ReadLine());
-            a.change_goals(i);
+            a.Goals=i;
             Console.WriteLine("Введите количество асистов полевого игрока\n");
             i = Convert.ToInt32(Console.ReadLine());
-            a.change_assists(i);
+            a.Assists=i;
             Console.WriteLine("Введите количество красных карточек\n");
             i = Convert.ToInt32(Console.ReadLine());
-            a.change_red_cards(i);
+            a.Red_cards=i;
             Console.WriteLine("Введите количество желтых карточек\n");
             i = Convert.ToInt32(Console.ReadLine());
-            a.change_yellow_cards(i);
+            a.Yellow_cards=i;
             Console.WriteLine("Введите позицию\n");
             pos = Console.ReadLine();
-            a.change_position(pos);
+            a.Position=pos;
             Console.WriteLine("Введите национальность полевого игрока\n");
             loc = Console.ReadLine();
-            a.change_nation(loc);
+            a.Nation=loc;
             Console.WriteLine("Введите вес полевого игрока\n");
             i = Convert.ToInt32(Console.ReadLine());
-            a.change_weight(i);
+            a.Weight=i;
             Console.WriteLine("Введите рост полевого игрока\n");
             i = Convert.ToInt32(Console.ReadLine());
-            a.change_height(i);
+            a.Height=i;
         }
 
         public static void input_full_game(game a)
@@ -365,70 +365,70 @@ namespace labrab5
                         string im;
                         Console.WriteLine("Введите имя полевого игрока\n");
                         im=Console.ReadLine();
-                        a.change_name(im);
+                        a.Name=im;
                     }
                     if (action == 3)
                     {
                         int i;
                         Console.WriteLine("Введите возраст\n");
                     i = Convert.ToInt32(Console.ReadLine());
-                    a.change_age(i);
+                    a.Age=i;
                     }
                     if (action == 4)
                     {
                         int i;
                         Console.WriteLine("Введите количество голов полевого игрока\n");
                     i = Convert.ToInt32(Console.ReadLine());
-                    a.change_goals(i);
+                    a.Goals=i;
                     }
                     if (action == 5)
                     {
                         int i;
                         Console.WriteLine("Введите количество асистов полевого игрока\n");
                     i = Convert.ToInt32(Console.ReadLine());
-                    a.change_assists(i);
+                    a.Assists=i;
                     }
                     if (action == 6)
                     {
                         int i;
                         Console.WriteLine("Введите количество красных карточек\n");
                     i = Convert.ToInt32(Console.ReadLine());
-                    a.change_red_cards(i);
+                    a.Red_cards=i;
                     }
                     if (action == 7)
                     {
                         int i;
                         Console.WriteLine("Введите количество желтых карточек\n");
                     i = Convert.ToInt32(Console.ReadLine());
-                    a.change_yellow_cards(i);
+                    a.Yellow_cards=i;
                     }
                     if (action == 8)
                     {
                         string pos;
                         Console.WriteLine("Введите позицию\n");
                        pos =Console.ReadLine();
-                        a.change_position(pos);
+                        a.Position=pos;
                     }
                     if (action == 9)
                     {
                         string loc;
                         Console.WriteLine("Введите национальность полевого игрока\n");
                         loc=Console.ReadLine();
-                        a.change_nation(loc);
+                        a.Nation=loc;
                     }
                     if (action == 10)
                     {
                         int i;
                         Console.WriteLine("Введите вес полевого игрока\n");
                     i = Convert.ToInt32(Console.ReadLine());
-                    a.change_height(i);
+                    a.Weight=i;
                     }
                     if (action == 11)
                     {
                         int i;
                         Console.WriteLine("Введите рост полевого игрока\n");
                     i = Convert.ToInt32(Console.ReadLine());
-                    a.change_height(i);
+                    a.Height=i;
                     }
                     if (action == 12)
                     {
