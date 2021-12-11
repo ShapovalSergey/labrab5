@@ -598,7 +598,7 @@ namespace labrab5
             int mode; int check = 1;
             while (check == 1)
             {
-               Console.WriteLine("Выберите с каким классом вы хотите работать\n1)Лига\n2)Команда\n3)Вратари\n4)Полевые\n5)Игры\n6)Массив объектов класса game\n");
+               Console.WriteLine("Выберите с каким классом вы хотите работать\n1)Лига\n2)Команда\n3)Вратари\n4)Полевые\n5)Игры\n6)Массив объектов класса game\n7)Работа со строками\n");
                 mode = Convert.ToInt32(Console.ReadLine());
                 if (mode == 1)
                 {
