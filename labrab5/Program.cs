@@ -25,25 +25,25 @@ namespace labrab5
             string im, loc; int i;
             Console.WriteLine("Введите название команды\n");
             im = Console.ReadLine();
-            a.change_name(im);
+            a.Name=im;
             Console.WriteLine("Введите количество побед\n");
             i = Convert.ToInt32(Console.ReadLine());
-            a.change_wins(i);
+            a.Wins=i;
             Console.WriteLine("Введите количество поражений\n");
             i = Convert.ToInt32(Console.ReadLine());
-            a.change_defeats(i);
+            a.Defeats=i;
             Console.WriteLine("Введите количество ничьих\n");
             i = Convert.ToInt32(Console.ReadLine());
-            a.change_draws(i);
+            a.Draws=i;
             Console.WriteLine("Введите количество полевых игроков\n");
             i = Convert.ToInt32(Console.ReadLine());
-            a.change_value_of_field_players(i);
+            a.Value_of_field_players=i;
             Console.WriteLine("Введите количество вратарей\n");
             i = Convert.ToInt32(Console.ReadLine());
-            a.change_value_of_goalkeepers(i);
+            a.Value_of_goalkeepers=i;
             Console.WriteLine("Введите город команды\n");
             loc = Console.ReadLine();
-            a.change_location(loc);
+            a.Location=loc;
         }
 
         public static void input_full_gp(goalkeeper a)
@@ -200,49 +200,49 @@ namespace labrab5
                         string im;
                         Console.WriteLine("Введите название команды\n");
                         im=Console.ReadLine();
-                        a.change_name(im);
+                        a.Name=im;
                     }
                     if (action == 3)
                     {
                         int i;
                         Console.WriteLine("Введите количество побед\n");
                         i= Convert.ToInt32(Console.ReadLine());
-                        a.change_wins(i);
+                        a.Wins=i;
                     }
                     if (action == 4)
                     {
                         int i;
                         Console.WriteLine("Введите количество поражений\n");
                     i = Convert.ToInt32(Console.ReadLine());
-                    a.change_defeats(i);
+                    a.Defeats=i;
                     }
                     if (action == 5)
                     {
                         int i;
                         Console.WriteLine("Введите количество ничьих\n");
                     i = Convert.ToInt32(Console.ReadLine());
-                    a.change_draws(i);
+                    a.Draws=i;
                     }
                     if (action == 6)
                     {
                         int i;
                         Console.WriteLine("Введите количество полевых игроков\n");
                     i = Convert.ToInt32(Console.ReadLine());
-                    a.change_value_of_field_players(i);
+                    a.Value_of_field_players=i;
                     }
                     if (action == 7)
                     {
                         int i;
                         Console.WriteLine("Введите количество вратарей\n");
                     i = Convert.ToInt32(Console.ReadLine());
-                    a.change_value_of_goalkeepers(i);
+                    a.Value_of_goalkeepers=i;
                     }
                     if (action == 8)
                     {
                         string loc;
                         Console.WriteLine("Введите город команды\n");
                         loc=Console.ReadLine();
-                        a.change_location(loc);
+                        a.Location=loc;
                     }
                     if (action == 9)
                     {

@@ -62,7 +62,7 @@ namespace labrab5
 		public void teamvivod()
 		{
 		
-			Console.WriteLine(tm.return_name()+"\n");
+			Console.WriteLine(tm.Name+"\n");
 		}
 		public void vivod() { Console.WriteLine( name+" "+ value_of_teams + " " + years + " " + location+"\n"); }
     }
