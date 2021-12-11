@@ -8,16 +8,16 @@ namespace labrab5
             string im, loc, season; int i;
             Console.WriteLine("Введите название лиги\n");
             im = Console.ReadLine();
-            a.change_name(im);
+            a.Name=im;
             Console.WriteLine("Введите количество команд\n");
             i = Convert.ToInt32(Console.ReadLine());
-            a.change_value(i);
+            a.Value_of_teams=i;
             Console.WriteLine("Введите сезон лиги\n");
             season = Console.ReadLine();
-            a.change_years(season);
+            a.Years=season;
             Console.WriteLine("Введите страну лиги\n");
             loc = Console.ReadLine();
-            a.change_loc(loc);
+            a.Location=loc;
         }
 
         public static void input_full_team(team a)
@@ -149,28 +149,28 @@ namespace labrab5
                     string im;
                     Console.WriteLine("Введите название лиги\n");
                     im = Console.ReadLine();
-                    a.change_name(im);
+                    a.Name=im;
                 }
                 if (action == 3)
                 {
                     int i;
                     Console.WriteLine("Введите количество команд\n");
                     i = Convert.ToInt32(Console.ReadLine());
-                    a.change_value(i);
+                    a.Value_of_teams=i;
                 }
                 if (action == 4)
                 {
                     string season;
                     Console.WriteLine("Введите сезон лиги\n");
                     season = Console.ReadLine();
-                    a.change_years(season);
+                    a.Years=season;
                 }
                 if (action == 5)
                 {
                     string loc;
                     Console.WriteLine("Введите страну лиги\n");
                     loc = Console.ReadLine();
-                    a.change_loc(loc);
+                    a.Location=loc;
                 }
                 if (action == 6)
                 {
