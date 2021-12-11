@@ -4,20 +4,20 @@ using System.Text;
 
 namespace labrab5
 {
-	public class game
+	public struct game
 	{
 		private string league_name;
 		private string home_team;
 		private string visitor_team;
 		private string result;
 		//////////////////////////func
-		public game() { }
+		//public game() { }
 		public game(string name, string rez, string vis, string home)
 		{
-			League_name = name;
-			Home_team = home;
-			Visitor_team = vis;
-			Result = rez;
+			league_name = name;
+			home_team = home;
+			visitor_team = vis;
+			result = rez;
 		}
 		public string League_name
 		{

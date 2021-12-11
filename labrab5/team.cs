@@ -4,7 +4,7 @@ using System.Text;
 
 namespace labrab5
 {
-	public class team
+	public struct team
 	{
 		private string name;
 		private int wins;
@@ -14,17 +14,17 @@ namespace labrab5
 		private int value_of_goalkeepers;
 		private string location;
 		//////////////////////////func
-		public team() { }
+		//public team() { }
 		public team(string name1, int wins1, int defeats1, int draws1, int val_of_fp, int val_of_gk, string location1)
 		{
 
-			Name = name1;
-			Wins = wins1;
-			Defeats = defeats1;
-			Draws = draws1;
-			Value_of_field_players = val_of_fp;
-			Value_of_goalkeepers = val_of_gk;
-			Location = location1;
+			name = name1;
+			wins = wins1;
+			defeats = defeats1;
+			draws = draws1;
+			value_of_field_players = val_of_fp;
+			value_of_goalkeepers = val_of_gk;
+			location = location1;
 		}
 		public string Name
 		{

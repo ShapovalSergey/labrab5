@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Text;
 namespace labrab5
 {
-	public class league
+	public struct league
 	{
 
 		private string name;
 		private int value_of_teams;
 		private string years;
 		private string location;
-		private team tm;
+		//private team tm;
 		//////////////////////////func
-		public void Addteam(team a)
-		{
-			tm = a;
-		}
-		public league() { }
+		//public void Addteam(team a)
+		//{
+		//	tm = a;
+		//}
+	//	public league() { }
 
 		
 		public league(string name1, int value_of_teams1, string  years1, string location1)
@@ -54,11 +54,11 @@ namespace labrab5
 			get { return value_of_teams; }
 		}
 		//~league();
-		public void teamvivod()
-		{
+		//public void teamvivod()
+	//	{
 		
-			Console.WriteLine(tm.Name+"\n");
-		}
+	//		Console.WriteLine(tm.Name+"\n");
+	//	}
 		public void vivod() { Console.WriteLine( name+" "+ value_of_teams + " " + years + " " + location+"\n"); }
     }
 }

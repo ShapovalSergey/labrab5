@@ -4,11 +4,11 @@ using System.Text;
 
 namespace labrab5
 {
-   public class goalkeeper
+   public struct goalkeeper
     {
 		private string name;
 		private int age;
-		private int games;
+		//private int games;
 		private int goals;
 		private int assists;
 		private int red_cards;
@@ -20,20 +20,20 @@ namespace labrab5
 
 		//////////////////////////func
 
-		public goalkeeper() { }
-		public goalkeeper(string name1, int age1, int games1, int goals1, int assists1, int red1, int yellow1, int missed_balls1, string nation1, int weig1, int heig1)
+		//public goalkeeper() { }
+		public goalkeeper(string name1, int age1, int goals1, int assists1, int red1, int yellow1, int missed_balls1, string nation1, int weig1, int heig1)
 		{
-			Name = name1;
-			Nation = nation1;
-			Age = age1;
+			name = name1;
+			nation = nation1;
+			age = age1;
 			//Games = games1;
-			Goals = goals1;
-			Assists = assists1;
-			Red_cards = red1;
-			Yellow_cards = yellow1;
-			Missed_balls = missed_balls1;
-			Weight = weig1;
-			Height = heig1;
+			goals = goals1;
+			assists = assists1;
+			red_cards = red1;
+			yellow_cards = yellow1;
+			missed_balls = missed_balls1;
+			weight = weig1;
+			height = heig1;
 		}
 		public int Age
 		{
@@ -46,7 +46,7 @@ namespace labrab5
 			}
 			get { return age; }
 		}
-		public int Games
+	/*	public int Games
 		{
 			set
 			{
@@ -56,7 +56,7 @@ namespace labrab5
 					games = value;
 			}
 			get { return games; }
-		}
+		}*/
 		public int Goals
 		{
 			set

@@ -3,7 +3,7 @@
 namespace labrab5
 {
     class Program
-    { public static void input_full_league(league a)
+    { public static void input_full_league(ref league a)
         {
             string im, loc, season; int i;
             Console.WriteLine("Введите название лиги\n");
@@ -20,7 +20,7 @@ namespace labrab5
             a.Location=loc;
         }
 
-        public static void input_full_team(team a)
+        public static void input_full_team(ref team a)
         {
             string im, loc; int i;
             Console.WriteLine("Введите название команды\n");
@@ -46,7 +46,7 @@ namespace labrab5
             a.Location=loc;
         }
 
-        public static void input_full_gp(goalkeeper a)
+        public static void input_full_gp(ref goalkeeper a)
         {
             string im, loc; int i;
             Console.WriteLine("Введите имя вратаря\n");
@@ -81,7 +81,7 @@ namespace labrab5
             a.Height=i;
         }
 
-        public static void input_full_fp(field_player a)
+        public static void input_full_fp(ref field_player a)
         {
             string im, loc; int i; string pos;
             Console.WriteLine("Введите имя полевого игрока\n");
@@ -116,33 +116,33 @@ namespace labrab5
             a.Height=i;
         }
 
-        public static void input_full_game(game a)
+        public static void input_full_game(out game a)
         {
-            string im;
+            string im;game b = new game() ;
             Console.WriteLine("Введите название лиги\n");
             im = Console.ReadLine();
-            a.League_name=im;
+            b.League_name=im;
             Console.WriteLine("Введите команду - хозяев\n");
             im = Console.ReadLine();
-            a.Home_team=im;
+            b.Home_team=im;
             Console.WriteLine("Введите команду - гостей\n");
             im = Console.ReadLine();
-            a.Visitor_team=im;
+            b.Visitor_team=im;
             Console.WriteLine("Введите результат матч\n");
             im = Console.ReadLine();
-            a.Result=im;
+            b.Result=im;a = b;
         }
 
         public static void func1()
         {
-            int check = 1;  int action; league a = new league();
+            int check = 1;  int action; league a = new league(); 
             while (check == 1)
             {
                 Console.WriteLine("Выберите, что вы хотите сделать\n1)Ввести данные лиги\n2)Изменить имя лиги\n3)Изменить количество команд\n4)Изменить сезон лиги\n5)Изменить страну лиги\n6)Вывести данные лиги\n");
                 action = Convert.ToInt32(Console.ReadLine());
                 if (action == 1)
                 {
-                    input_full_league(a);
+                    input_full_league(ref a);
                 }
                 if (action == 2)
                 {
@@ -193,7 +193,7 @@ namespace labrab5
                     action=Convert.ToInt32(Console.ReadLine());
                     if (action == 1)
                     {
-                        input_full_team(a);
+                        input_full_team(ref a);
                     }
                     if (action == 2)
                     {
@@ -264,7 +264,7 @@ namespace labrab5
                 action = Convert.ToInt32(Console.ReadLine());
                 if (action == 1)
                     {
-                        input_full_gp(a);
+                        input_full_gp(ref a);
                     }
                     if (action == 2)
                     {
@@ -358,7 +358,7 @@ namespace labrab5
                 action = Convert.ToInt32(Console.ReadLine());
                 if (action == 1)
                     {
-                        input_full_fp(a);
+                        input_full_fp(ref a);
                     }
                     if (action == 2)
                     {
@@ -449,7 +449,7 @@ namespace labrab5
                 action = Convert.ToInt32(Console.ReadLine());
                 if (action == 1)
                     {
-                        input_full_game(a);
+                        input_full_game(out a);
                     }
                     if (action == 2)
                     {
@@ -498,7 +498,7 @@ namespace labrab5
                 action = Convert.ToInt32(Console.ReadLine());
                 if (action == 1)
                 {
-                    input_full_game(a[0]); input_full_game(a[1]);
+                    input_full_game(out a[0]); input_full_game(out a[1]);
                 }
                 if (action == 2)
                 {
