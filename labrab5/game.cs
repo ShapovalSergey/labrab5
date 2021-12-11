@@ -12,12 +12,26 @@ namespace labrab5
 		private string result;
 		//////////////////////////func
 		//public game() { }
-		public game(string name, string rez, string vis, string home)
+
+
+		public static game operator +(game g1, game g2)
 		{
-			league_name = name;
-			home_team = home;
-			visitor_team = vis;
-			result = rez;
+			game g3 = new game();
+			g3.League_name = g1.League_name + g2.League_name;
+			g3.Home_team = g1.Home_team + g2.Home_team;
+			g3.Visitor_team = g1.Visitor_team + g2.Visitor_team;
+			g3.Result = g1.Result + g2.Result;
+			return g3;
+		}
+
+
+
+		public game(string league_name, string result, string visitor_team, string home_team)
+		{
+			this.league_name = league_name;
+			this.home_team = home_team;
+			this.visitor_team = visitor_team;
+			this.result = result;
 		}
 		public string League_name
 		{

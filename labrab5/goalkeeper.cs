@@ -21,6 +21,10 @@ namespace labrab5
 		//////////////////////////func
 
 		//public goalkeeper() { }
+		public static goalkeeper operator ++(goalkeeper c1)
+		{
+			return new goalkeeper { Age = c1.Age + 1 };
+		}
 		public goalkeeper(string name1, int age1, int goals1, int assists1, int red1, int yellow1, int missed_balls1, string nation1, int weig1, int heig1)
 		{
 			name = name1;

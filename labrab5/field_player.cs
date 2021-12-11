@@ -22,6 +22,10 @@ namespace labrab5
 		//////////////////////////func
 
 		// field_player() { }
+		public static field_player operator ++(field_player c1)
+		{
+			return new field_player { Age = c1.Age + 1 };
+		}
 		public field_player(string name1, int age1, int goals1, int assists1, int red1, int yellow1, string position1, string nation1, int weig1, int heig1)
 		{
 			name = name1;
