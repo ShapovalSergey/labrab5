@@ -548,7 +548,50 @@ namespace labrab5
                 check = Convert.ToInt32(Console.ReadLine());
             }
         }
+        public static void func7() 
+        {
+            int check = 1; int action; String im; im = "";
+            while (check == 1)
+            {
+                Console.WriteLine("Выберите, что вы хотите сделать\n1)Ввести строку\n2)Изменить строку\n3)Добавить строку к строке\n4)Вывести строку\n5)Узнать длину строки\n");
+                action = Convert.ToInt32(Console.ReadLine());
+                if (action == 1)
+                {
+                    Console.WriteLine("Введите строку\n");
+                    im =Console.ReadLine();
 
+                }
+                if (action == 2)
+                {
+                    Console.WriteLine("Ваша строка:" + im + "\n");
+                    Console.WriteLine("Введите строку\n");
+                    im =Console.ReadLine();
+                }
+                if (action == 3)
+                {
+                    Console.WriteLine("Ваша строка:" + im + "\n");
+                    Console.WriteLine("Введите строку\n");
+                    im = im+(Console.ReadLine());
+                }
+                if (action == 4)
+                {
+                    Console.WriteLine("Ваша строка:" + im + "\n");
+                }
+                if (action == 5)
+                {
+                    Console.WriteLine("Длина вашей строки:" + im.Length + "\n");
+                }
+
+
+
+
+
+                Console.WriteLine("Вы хотите продолжить с этим пунктом? 1 - да, 0 - нет \n");
+                check = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+    
 
         static void Main(string[] args)
         {
@@ -580,6 +623,10 @@ namespace labrab5
                 if (mode == 6)
                 {
                     func6();
+                }
+                if (mode == 7)
+                {
+                    func7();
                 }
                 Console.WriteLine("Вы хотите продолжить? 1 - да, 0 - нет ");
                 check = Convert.ToInt32(Console.ReadLine());
