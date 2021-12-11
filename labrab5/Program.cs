@@ -488,12 +488,74 @@ namespace labrab5
                 check = Convert.ToInt32(Console.ReadLine());
             }
         }
+
+        public static void func6()
+        {
+            int check = 1; int action; game[] a = new game[2];a[0] = new game(); a[1] = new game();
+            while (check == 1)
+            {
+                Console.WriteLine("Выберите, что вы хотите сделать\n1)Ввести данные матча\n2)Изменить название лиги\n3)Изменить команду - хозяев\n4)Изменить команду - гостей\n5)Изменить результат матча\n6)Вывести данные матча\n");
+                action = Convert.ToInt32(Console.ReadLine());
+                if (action == 1)
+                {
+                    input_full_game(a[0]); input_full_game(a[1]);
+                }
+                if (action == 2)
+                {
+                    string im;int i;
+                    Console.WriteLine("Введите номер матча\n");
+                    i =  Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Введите название лиги\n");
+                    im = Console.ReadLine();
+                    a[i-1].League_name = im;
+                }
+                if (action == 3)
+                {
+                    string im; int i;
+                    Console.WriteLine("Введите номер матча\n");
+                    i = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Введите команду - хозяев\n");
+                    im = Console.ReadLine();
+                    a[i-1].Home_team = im;
+                }
+                if (action == 4)
+                {
+                    string im; int i;
+                    Console.WriteLine("Введите номер матча\n");
+                    i = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Введите команду - гостей\n");
+                    im = Console.ReadLine();
+                    a[i-1].Visitor_team = im;
+                }
+                if (action == 5)
+                {
+                    string im; int i;
+                    Console.WriteLine("Введите номер матча\n");
+                    i = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Введите результат матч\n");
+                    im = Console.ReadLine();
+                    a[i-1].Result = im;
+                }
+                if (action == 6)
+                {
+                    int i;
+                    Console.WriteLine("Введите номер матча\n");
+                    i = Convert.ToInt32(Console.ReadLine());
+                    a[i-1].vivod();
+                }
+                Console.ReadKey();
+                Console.WriteLine("\nВы хотите продолжить с этим классом? 1 - да, 0 - нет ");
+                check = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
+
         static void Main(string[] args)
         {
             int mode; int check = 1;
             while (check == 1)
             {
-               Console.WriteLine("Выберите с каким классом вы хотите работать\n1)Лига\n2)Команда\n3)Вратари\n4)Полевые\n5)Игры\n");
+               Console.WriteLine("Выберите с каким классом вы хотите работать\n1)Лига\n2)Команда\n3)Вратари\n4)Полевые\n5)Игры\n6)Массив объектов класса game\n");
                 mode = Convert.ToInt32(Console.ReadLine());
                 if (mode == 1)
                 {
@@ -514,6 +576,10 @@ namespace labrab5
                 if (mode == 5)
                 {
                     func5();
+                }
+                if (mode == 6)
+                {
+                    func6();
                 }
                 Console.WriteLine("Вы хотите продолжить? 1 - да, 0 - нет ");
                 check = Convert.ToInt32(Console.ReadLine());
