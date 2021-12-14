@@ -132,50 +132,54 @@ namespace labrab5
             im = Console.ReadLine();
             b.Result=im;a = b;
         }
-
+        public static void change_league(ref league a)
+        {
+            int action;
+            Console.WriteLine("Выберите, что вы хотите сделать\n1)Ввести данные лиги\n2)Изменить имя лиги\n3)Изменить количество команд\n4)Изменить сезон лиги\n5)Изменить страну лиги\n6)Вывести данные лиги\n");
+            action = Convert.ToInt32(Console.ReadLine());
+            if (action == 1)
+            {
+                input_full_league(ref a);
+            }
+            if (action == 2)
+            {
+                string im;
+                Console.WriteLine("Введите название лиги\n");
+                im = Console.ReadLine();
+                a.Name = im;
+            }
+            if (action == 3)
+            {
+                int i;
+                Console.WriteLine("Введите количество команд\n");
+                i = Convert.ToInt32(Console.ReadLine());
+                a.Value_of_teams = i;
+            }
+            if (action == 4)
+            {
+                string season;
+                Console.WriteLine("Введите сезон лиги\n");
+                season = Console.ReadLine();
+                a.Years = season;
+            }
+            if (action == 5)
+            {
+                string loc;
+                Console.WriteLine("Введите страну лиги\n");
+                loc = Console.ReadLine();
+                a.Location = loc;
+            }
+            if (action == 6)
+            {
+                a.vivod();
+            }
+        }        
         public static void func1()
         {
-            int check = 1;  int action; league a = new league(); 
+            int check = 1; league a = new league(); 
             while (check == 1)
             {
-                Console.WriteLine("Выберите, что вы хотите сделать\n1)Ввести данные лиги\n2)Изменить имя лиги\n3)Изменить количество команд\n4)Изменить сезон лиги\n5)Изменить страну лиги\n6)Вывести данные лиги\n");
-                action = Convert.ToInt32(Console.ReadLine());
-                if (action == 1)
-                {
-                    input_full_league(ref a);
-                }
-                if (action == 2)
-                {
-                    string im;
-                    Console.WriteLine("Введите название лиги\n");
-                    im = Console.ReadLine();
-                    a.Name=im;
-                }
-                if (action == 3)
-                {
-                    int i;
-                    Console.WriteLine("Введите количество команд\n");
-                    i = Convert.ToInt32(Console.ReadLine());
-                    a.Value_of_teams=i;
-                }
-                if (action == 4)
-                {
-                    string season;
-                    Console.WriteLine("Введите сезон лиги\n");
-                    season = Console.ReadLine();
-                    a.Years=season;
-                }
-                if (action == 5)
-                {
-                    string loc;
-                    Console.WriteLine("Введите страну лиги\n");
-                    loc = Console.ReadLine();
-                    a.Location=loc;
-                }
-                if (action == 6)
-                {
-                    a.vivod();
-                }
+                change_league(ref a);
                 Console.ReadKey();
                 Console.WriteLine("\nВы хотите продолжить с этим классом? 1 - да, 0 - нет ");
                 check = Convert.ToInt32(Console.ReadLine());
@@ -590,15 +594,81 @@ namespace labrab5
                 check = Convert.ToInt32(Console.ReadLine());
             }
         }
+        public static void func8()
+        {
+            int check = 1; int mode;
+            while (check == 1)
+            {
+                league[,] a = new league[2, 3];
+                a[0, 0] = new league("РПЛ", 16, "2020-2021", "Россия");
+                a[0, 1] = new league("ФНЛ", 20, "2020-2021", "Россия");
+                a[0, 2] = new league("ФНЛ-2", 62, "2020-2021", "Россия");
+                a[1, 0] = new league("APL", 20, "2020-2021", "Англия");
+                a[1, 1] = new league("Championship", 20, "2020-2021", "Англия");
+                a[1, 2] = new league("League One", 20, "2020-2021", "Англия");
 
-    
+                Console.WriteLine("Выберите, что вы хотите сделать\n1)Изменить лигу\n2)Вывести данные лиги\n3)Вывести лиги страны\n");
+                mode = Convert.ToInt32(Console.ReadLine());
+                if (mode == 1)
+                {
+                    int country, div;
+                    Console.WriteLine("Выберите страну:\n1)Россия\n2)Англия\n ");
+                    country = Convert.ToInt32(Console.ReadLine());
+                    if (country == 1)
+                    {
+                        Console.WriteLine("Выберите дивизион:\n1)РПЛ\n2)ПФЛ\n3)ПФЛ-2\n ");
+                        div = Convert.ToInt32(Console.ReadLine());
+                        change_league(ref a[(country - 1),(div - 1)]);
+                    }
+                    if (country == 2)
+                    {
+                        Console.WriteLine("Выберите дивизион:\n1)APL\n2)Championship\n3)League One\n");
+                        div = Convert.ToInt32(Console.ReadLine());
+                        change_league(ref a[country - 1,div - 1]);
+                    }
+                }
+                if (mode == 2)
+                {
+                    int country, div;
+                    Console.WriteLine("Выберите страну:\n1)Россия\n2)Англия\n ");
+                    country = Convert.ToInt32(Console.ReadLine());
+                    if (country == 1)
+                    {
+                        Console.WriteLine("Выберите дивизион:\n1)РПЛ\n2)ПФЛ\n3)ПФЛ-2\n");
+                        div = Convert.ToInt32(Console.ReadLine());
+                        a[country - 1,div - 1].vivod();
+                    }
+                    if (country == 2)
+                    {
+                        Console.WriteLine("Выберите дивизион:\n1)APL\n2)Championship\n3)League One\n");
+                        div = Convert.ToInt32(Console.ReadLine());
+                        a[country - 1,div - 1].vivod();
+                    }
+                }
+                if (mode == 3)
+                {
+                    int country, div;
+                    Console.WriteLine("Выберите страну:\n1)Россия\n2)Англия\n");
+                    country = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine(a[country - 1, 2].Name+"\n" + a[country - 1, 2].Name+"\n" + a[country - 1, 2].Name+"\n");
+                }
+
+
+
+
+
+                Console.WriteLine("Вы хотите продолжить с этим пунктом? 1 - да, 0 - нет \n");
+                check = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+
 
         static void Main(string[] args)
         {
             int mode; int check = 1;
             while (check == 1)
             {
-               Console.WriteLine("Выберите с каким классом вы хотите работать\n1)Лига\n2)Команда\n3)Вратари\n4)Полевые\n5)Игры\n6)Массив объектов класса game\n7)Работа со строками\n");
+               Console.WriteLine("Выберите с каким классом вы хотите работать\n1)Лига\n2)Команда\n3)Вратари\n4)Полевые\n5)Игры\n6)Массив объектов класса game\n7)Работа со строками\n8)Двумерный массив\n");
                 mode = Convert.ToInt32(Console.ReadLine());
                 if (mode == 1)
                 {
@@ -627,6 +697,10 @@ namespace labrab5
                 if (mode == 7)
                 {
                     func7();
+                }
+                if (mode==8)
+                {
+                    func8();
                 }
                 Console.WriteLine("Вы хотите продолжить? 1 - да, 0 - нет ");
                 check = Convert.ToInt32(Console.ReadLine());
