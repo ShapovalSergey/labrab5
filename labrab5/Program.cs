@@ -132,7 +132,48 @@ namespace labrab5
             im = Console.ReadLine();
             a.Result=im;
         }
-
+        public static void change_league(ref league a)
+        {
+            int action;
+            Console.WriteLine("Выберите, что вы хотите сделать\n1)Ввести данные лиги\n2)Изменить имя лиги\n3)Изменить количество команд\n4)Изменить сезон лиги\n5)Изменить страну лиги\n6)Вывести данные лиги\n");
+            action = Convert.ToInt32(Console.ReadLine());
+            if (action == 1)
+            {
+                input_full_league(a);
+            }
+            if (action == 2)
+            {
+                string im;
+                Console.WriteLine("Введите название лиги\n");
+                im = Console.ReadLine();
+                a.Name = im;
+            }
+            if (action == 3)
+            {
+                int i;
+                Console.WriteLine("Введите количество команд\n");
+                i = Convert.ToInt32(Console.ReadLine());
+                a.Value_of_teams = i;
+            }
+            if (action == 4)
+            {
+                string season;
+                Console.WriteLine("Введите сезон лиги\n");
+                season = Console.ReadLine();
+                a.Years = season;
+            }
+            if (action == 5)
+            {
+                string loc;
+                Console.WriteLine("Введите страну лиги\n");
+                loc = Console.ReadLine();
+                a.Location = loc;
+            }
+            if (action == 6)
+            {
+                a.vivod();
+            }
+        }
         public static void func1()
         {
             int check = 1;  int action; league a = new league();
@@ -602,7 +643,7 @@ namespace labrab5
                 }
                 if (mode == 3)
                 {
-                    int country, div;
+                    int country;
                     Console.WriteLine("Выберите страну:\n1)Россия\n2)Англия\n");
                     country = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine(a[country - 1, 2].Name + "\n" + a[country - 1, 2].Name + "\n" + a[country - 1, 2].Name + "\n");
@@ -622,7 +663,7 @@ namespace labrab5
             int mode; int check = 1;
             while (check == 1)
             {
-               Console.WriteLine("Выберите с каким классом вы хотите работать\n1)Лига\n2)Команда\n3)Вратари\n4)Полевые\n5)Игры\n6)Массив объектов класса game\n");
+               Console.WriteLine("Выберите с каким классом вы хотите работать\n1)Лига\n2)Команда\n3)Вратари\n4)Полевые\n5)Игры\n6)Массив объектов класса game\n8)Двумерный массив\n");
                 mode = Convert.ToInt32(Console.ReadLine());
                 if (mode == 1)
                 {
