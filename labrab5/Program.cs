@@ -650,7 +650,7 @@ namespace labrab5
                     int country, div;
                     Console.WriteLine("Выберите страну:\n1)Россия\n2)Англия\n");
                     country = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine(a[country - 1, 2].Name+"\n" + a[country - 1, 2].Name+"\n" + a[country - 1, 2].Name+"\n");
+                    Console.WriteLine(a[country - 1, 0].Name + "\n" + a[country - 1, 1].Name + "\n" + a[country - 1, 2].Name + "\n");
                 }
 
 
