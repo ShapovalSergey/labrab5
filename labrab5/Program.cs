@@ -659,7 +659,7 @@ namespace labrab5
         }
         public static void func9()
         {
-            Console.WriteLine("Количество команд = "+team.ReturnN());
+            Console.WriteLine("Количество команд = "+team.ReturnN()+"\n");
         }
 
 
