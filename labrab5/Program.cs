@@ -657,13 +657,18 @@ namespace labrab5
                 check = Convert.ToInt32(Console.ReadLine());
             }
         }
+        public static void func9()
+        {
+            Console.WriteLine("Количество команд = "+team.ReturnN());
+        }
 
-        static void Main(string[] args)
+
+            static void Main(string[] args)
         {
             int mode; int check = 1;
             while (check == 1)
             {
-               Console.WriteLine("Выберите с каким классом вы хотите работать\n1)Лига\n2)Команда\n3)Вратари\n4)Полевые\n5)Игры\n6)Массив объектов класса game\n8)Двумерный массив\n");
+               Console.WriteLine("Выберите с каким классом вы хотите работать\n1)Лига\n2)Команда\n3)Вратари\n4)Полевые\n5)Игры\n6)Массив объектов класса game\n8)Двумерный массив\n9)Вывести количество команд\n");
                 mode = Convert.ToInt32(Console.ReadLine());
                 if (mode == 1)
                 {
@@ -692,6 +697,10 @@ namespace labrab5
                 if (mode==8)
                 {
                     func8();
+                }
+                if (mode == 9)
+                {
+                    func9();
                 }
                 Console.WriteLine("Вы хотите продолжить? 1 - да, 0 - нет ");
                 check = Convert.ToInt32(Console.ReadLine());
