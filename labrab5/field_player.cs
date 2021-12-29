@@ -4,9 +4,9 @@ using System.Text;
 
 namespace labrab5
 {
-    public class field_player
-    {
-
+	public class field_player
+	{
+		static int Disq = 4;
 		private string name;
 		private int age;
 		private int games;
@@ -20,7 +20,7 @@ namespace labrab5
 		private int height;
 
 		//////////////////////////func
-
+		public static int RetDisq(){return Disq;}
 		public field_player() { }
 		public field_player(string name1, int age1, int games1, int goals1, int assists1, int red1, int yellow1, string position1, string nation1, int weig1, int heig1)
 		{
