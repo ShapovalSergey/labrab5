@@ -478,7 +478,7 @@ namespace labrab5
                 if (action == 13)
                 {
                     int k, i; k = a.Yellow_cards;
-                    for (i = 0; k >= 4; i++)
+                    for (i = 0; k >= field_player.RetDisq(); i++)
                     {
                         k -= field_player.RetDisq();
                     }
