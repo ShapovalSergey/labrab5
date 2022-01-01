@@ -29,6 +29,7 @@ namespace labrab5
 			Location = location1;
 			n++;
 		}
+		public team(string name1) { Name = name1; n++; }
 		public string Name
 		{
 			set { name = value; }

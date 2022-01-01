@@ -36,6 +36,7 @@ namespace labrab5
 			Weight = weig1;
 			Height = heig1;
 		}
+		public field_player(string name1) { Name = name1; }
 		public int Age
 		{
 			set

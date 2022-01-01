@@ -19,6 +19,7 @@ namespace labrab5
 			Visitor_team = vis;
 			Result = rez;
 		}
+		public game(string name) { League_name = name; }
 		public string League_name
 		{
 			set { league_name = value; }

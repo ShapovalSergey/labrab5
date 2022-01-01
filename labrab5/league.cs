@@ -21,11 +21,12 @@ namespace labrab5
 		
 		public league(string name1, int value_of_teams1, string  years1, string location1)
 		{
-			name = name1;
-			value_of_teams = value_of_teams1;
-			years = years1;
-			location = location1;
+			Name = name1;
+			Value_of_teams = value_of_teams1;
+			Years = years1;
+			Location = location1;
 		}
+		public league(string name1) { Name = name1; }
 
 		public string Name
 		{

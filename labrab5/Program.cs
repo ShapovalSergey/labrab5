@@ -670,14 +670,27 @@ namespace labrab5
         {
             Console.WriteLine("Количество команд = "+team.ReturnN()+"\n");
         }
+        public static void func10()
+        {
+            team a=new team(); team x=new team("Зенит"); team y = new team("Локомотив");
+            team b = new team("Спартак");
+            team c = new team("Динамо", 10, 9, 1, 17, 3, "Москва");
+            team []d = new team [2];d[0] = x;d[1] = y;
+
+            Console.WriteLine("\nКонструктор команды без параметров: "); a.vivod();
+            Console.WriteLine("\nКонструктор команды с одним параметром: "); b.vivod();
+            Console.WriteLine("\nКонструктор команды со всеми параметрами: "); c.vivod();
+            Console.WriteLine("\nМассив инициализированный конструктором с одним параметром: "); d[0].vivod(); Console.WriteLine("\n"); d[1].vivod();
+            Console.WriteLine("\n");
+        }
 
 
-            static void Main(string[] args)
+        static void Main(string[] args)
         {
             int mode; int check = 1;
             while (check == 1)
             {
-               Console.WriteLine("Выберите с каким классом вы хотите работать\n1)Лига\n2)Команда\n3)Вратари\n4)Полевые\n5)Игры\n6)Массив объектов класса game\n8)Двумерный массив\n9)Вывести количество команд\n");
+               Console.WriteLine("Выберите с каким классом вы хотите работать\n1)Лига\n2)Команда\n3)Вратари\n4)Полевые\n5)Игры\n6)Массив объектов класса game\n8)Двумерный массив\n9)Вывести количество команд\n10)Вызов всех конструкторов\n");
                 mode = Convert.ToInt32(Console.ReadLine());
                 if (mode == 1)
                 {
@@ -710,6 +723,10 @@ namespace labrab5
                 if (mode == 9)
                 {
                     func9();
+                }
+                if (mode == 10)
+                {
+                    func10();
                 }
                 Console.WriteLine("Вы хотите продолжить? 1 - да, 0 - нет ");
                 check = Convert.ToInt32(Console.ReadLine());
