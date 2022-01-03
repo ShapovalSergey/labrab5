@@ -144,6 +144,6 @@ namespace labrab5
 			get { return nation; }
 		}
 		//~field_player();
-		public void vivod() { Console.WriteLine( name+" "+ nation+" "+ age+" "+ goals+" "+ assists+" "+ red_cards+" "+ yellow_cards+" "+ position+" "+ weight+" "+ height+"\n"); }
+		public void Vivod() { Console.WriteLine( name+" "+ nation+" "+ age+" "+ goals+" "+ assists+" "+ red_cards+" "+ yellow_cards+" "+ position+" "+ weight+" "+ height+"\n"); }
 	}
 }

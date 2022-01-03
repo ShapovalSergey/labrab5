@@ -40,6 +40,6 @@ namespace labrab5
 			set { result = value; }
 			get { return result; }
 		}
-		public void vivod() { Console.WriteLine(league_name + " " + home_team + " " + result + " " + visitor_team + "\n"); }
+		public void Vivod() { Console.WriteLine(league_name + " " + home_team + " " + result + " " + visitor_team + "\n"); }
 	}
 }

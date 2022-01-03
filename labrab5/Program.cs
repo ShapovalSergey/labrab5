@@ -171,7 +171,7 @@ namespace labrab5
             }
             if (action == 6)
             {
-                a.vivod();
+                a.Vivod();
             }
         }
         public static void func1()
@@ -215,7 +215,7 @@ namespace labrab5
                 }
                 if (action == 6)
                 {
-                    a.vivod();
+                    a.Vivod();
                 }
                 Console.ReadKey();
                 Console.WriteLine("\nВы хотите продолжить с этим классом? 1 - да, 0 - нет ");
@@ -287,7 +287,7 @@ namespace labrab5
                     }
                     if (action == 9)
                     {
-                        a.vivod();
+                        a.Vivod();
                     }
                 Console.ReadKey();
                 Console.WriteLine("\nВы хотите продолжить с этим классом? 1 - да, 0 - нет ");
@@ -379,7 +379,7 @@ namespace labrab5
                     }
                     if (action == 12)
                     {
-                        a.vivod();
+                        a.Vivod();
                     }
                 Console.ReadKey();
                     Console.WriteLine("\nВы хотите продолжить с этим классом? 1 - да, 0 - нет ");
@@ -473,7 +473,7 @@ namespace labrab5
                     }
                     if (action == 12)
                     {
-                        a.vivod();
+                        a.Vivod();
                     }
                 if (action == 13)
                 {
@@ -531,7 +531,7 @@ namespace labrab5
                     }
                     if (action == 6)
                     {
-                        a.vivod();
+                        a.Vivod();
                     }
                 Console.ReadKey();
                     Console.WriteLine("\nВы хотите продолжить с этим классом? 1 - да, 0 - нет ");
@@ -591,7 +591,7 @@ namespace labrab5
                     int i;
                     Console.WriteLine("Введите номер матча\n");
                     i = Convert.ToInt32(Console.ReadLine());
-                    a[i-1].vivod();
+                    a[i-1].Vivod();
                 }
                 Console.ReadKey();
                 Console.WriteLine("\nВы хотите продолжить с этим классом? 1 - да, 0 - нет ");
@@ -641,13 +641,13 @@ namespace labrab5
                     {
                         Console.WriteLine("Выберите дивизион:\n1)РПЛ\n2)ПФЛ\n3)ПФЛ-2\n");
                         div = Convert.ToInt32(Console.ReadLine());
-                        a[country - 1, div - 1].vivod();
+                        a[country - 1, div - 1].Vivod();
                     }
                     if (country == 2)
                     {
                         Console.WriteLine("Выберите дивизион:\n1)APL\n2)Championship\n3)League One\n");
                         div = Convert.ToInt32(Console.ReadLine());
-                        a[country - 1, div - 1].vivod();
+                        a[country - 1, div - 1].Vivod();
                     }
                 }
                 if (mode == 3)
@@ -677,10 +677,10 @@ namespace labrab5
             team c = new team("Динамо", 10, 9, 1, 17, 3, "Москва");
             team []d = new team [2];d[0] = x;d[1] = y;
 
-            Console.WriteLine("\nКонструктор команды без параметров: "); a.vivod();
-            Console.WriteLine("\nКонструктор команды с одним параметром: "); b.vivod();
-            Console.WriteLine("\nКонструктор команды со всеми параметрами: "); c.vivod();
-            Console.WriteLine("\nМассив инициализированный конструктором с одним параметром: "); d[0].vivod(); Console.WriteLine("\n"); d[1].vivod();
+            Console.WriteLine("\nКонструктор команды без параметров: "); a.Vivod();
+            Console.WriteLine("\nКонструктор команды с одним параметром: "); b.Vivod();
+            Console.WriteLine("\nКонструктор команды со всеми параметрами: "); c.Vivod();
+            Console.WriteLine("\nМассив инициализированный конструктором с одним параметром: "); d[0].Vivod(); Console.WriteLine("\n"); d[1].Vivod();
             Console.WriteLine("\n");
         }
 

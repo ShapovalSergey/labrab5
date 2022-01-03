@@ -55,11 +55,11 @@ namespace labrab5
 			get { return value_of_teams; }
 		}
 		//~league();
-		public void teamvivod()
+		public void Teamvivod()
 		{
 		
 			Console.WriteLine(tm.Name+"\n");
 		}
-		public void vivod() { Console.WriteLine( name+" "+ value_of_teams + " " + years + " " + location+"\n"); }
+		public void Vivod() { Console.WriteLine( name+" "+ value_of_teams + " " + years + " " + location+"\n"); }
     }
 }

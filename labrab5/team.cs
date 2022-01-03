@@ -49,9 +49,9 @@ namespace labrab5
 		{
 			set
 			{
-				if (value < 0)
-					Console.WriteLine("Ничьи не могут быть отрицательным числом");
-				else
+			//	if (value < 0)
+			//		Console.WriteLine("Ничьи не могут быть отрицательным числом");
+			//	else
 					draws = value;
 			}
 			get { return draws; }
@@ -60,9 +60,9 @@ namespace labrab5
 		{
 			set
 			{
-				if (value < 0)
-					Console.WriteLine("Победы не могут быть отрицательным числом");
-				else
+				//if (value < 0)
+					//Console.WriteLine("Победы не могут быть отрицательным числом");
+				//else
 					wins = value;
 			}
 			get { return wins; }
@@ -94,6 +94,30 @@ namespace labrab5
 			set { location = value; }
 			get { return location; }
 		}
-	 public void vivod() { Console.WriteLine( name + " " + defeats+" "+ wins+" "+ draws+" "+ value_of_field_players+" "+ value_of_goalkeepers+" "+ location+"\n"); }
+	 public void Vivod() { Console.WriteLine( name + " " + defeats+" "+ wins+" "+ draws+" "+ value_of_field_players+" "+ value_of_goalkeepers+" "+ location+"\n"+"Количество очков = "+Stat()); }
+		public int Stat()
+		{
+			int points;
+            try
+            {
+				if ((Wins < 0) || (Draws < 0))
+				{
+					throw new Exception("Не удается получить корректный результат");
+				}
+                else
+                {
+					points = Wins * 3 + Draws;
+                }
+				
+			}
+            catch (Exception e)
+            {
+
+				Console.WriteLine($"Ошибка: {e.Message}");
+				points = 2147483647;
+			}
+			
+			
+			return points; }
 }
 }
