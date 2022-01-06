@@ -4,18 +4,15 @@ using System.Text;
 
 namespace labrab5
 {
-	public class field_player
+	public class field_player : player
 	{
 		static int Disq = 4;
-		private string name;
-		private int age;
 		private int games;
 		private int goals;
 		private int assists;
 		private int red_cards;
 		private int yellow_cards;
 		private string position;
-		private string nation;
 		private int weight;
 		private int height;
 
@@ -24,10 +21,8 @@ namespace labrab5
 		public field_player() { }
 		public field_player(string name1, int age1, int games1, int goals1, int assists1, int red1, int yellow1, string position1, string nation1, int weig1, int heig1)
 		{
-			Name = name1;
-			Nation = nation1;
-			Age = age1;
-			//games = games1;
+			new player(name1,age1,nation1);
+			Games = games1;
 			Goals = goals1;
 			Assists = assists1;
 			Red_cards = red1;
@@ -37,17 +32,8 @@ namespace labrab5
 			Height = heig1;
 		}
 		public field_player(string name1) { Name = name1; }
-		public int Age
-		{
-			set
-			{
-				if (value < 16)
-					Console.WriteLine("Возраст не может быть меньше 16");
-				else
-					age = value;
-			}
-			get { return age; }
-		}
+		public void Plus_age(int plus) { age += plus; }
+		public void Minus_age(int minus) { base.Minus_age(minus); }
 		public int Games
 		{
 			set
@@ -132,16 +118,6 @@ namespace labrab5
 					height = value;
 			}
 			get { return height; }
-		}
-		public string Name
-		{
-			set { name = value; }
-			get { return name; }
-		}
-		public string Nation
-		{
-			set { nation = value; }
-			get { return nation; }
 		}
 		//~field_player();
 		public void Vivod() { Console.WriteLine( name+" "+ nation+" "+ age+" "+ goals+" "+ assists+" "+ red_cards+" "+ yellow_cards+" "+ position+" "+ weight+" "+ height+"\n"); }

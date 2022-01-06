@@ -4,22 +4,19 @@ using System.Text;
 
 namespace labrab5
 {
-   public class goalkeeper
+   public class goalkeeper: player
     {
-		private string name;
-		private int age;
 		private int games;
 		private int goals;
 		private int assists;
 		private int red_cards;
 		private int yellow_cards;
 		private int missed_balls;
-		private string nation;
 		private int weight;
 		private int height;
 
 		//////////////////////////func
-
+		
 		public goalkeeper() { }
 		public goalkeeper(string name1, int age1, int games1, int goals1, int assists1, int red1, int yellow1, int missed_balls1, string nation1, int weig1, int heig1)
 		{
@@ -36,17 +33,6 @@ namespace labrab5
 			Height = heig1;
 		}
 		public goalkeeper(string name1) { Name = name1; }
-		public int Age
-		{
-			set
-			{
-				if (value < 16)
-					Console.WriteLine("Возраст не может быть меньше 16");
-				else
-					age = value;
-			}
-			get { return age; }
-		}
 		public int Games
 		{
 			set
@@ -135,17 +121,11 @@ namespace labrab5
 			}
 			get { return height; }
 		}
-		public string Name
-		{
-			set { name = value; }
-			get { return name; }
-		}
-		public string Nation
-		{
-			set { nation = value; }
-			get { return nation; }
-		}
 		//~field_player();
-		public void Vivod() { Console.WriteLine(name + " " + nation + " " + age + "  " + goals + " " + assists + " " + red_cards + " " + yellow_cards + " " + missed_balls + " " + weight + " " + height + "\n"); }
+		//public void Vivod() { Console.WriteLine(name + " " + nation + " " + age + "  " + goals + " " + assists + " " + red_cards + " " + yellow_cards + " " + missed_balls + " " + weight + " " + height + "\n"); }
+		public override string ToString()
+		{
+			return string.Format("{0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10}", name, nation, age,games,goals,assists,red_cards,yellow_cards,missed_balls,weight,height);
+		}
 	}
 }
