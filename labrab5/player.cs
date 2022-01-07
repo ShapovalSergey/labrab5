@@ -18,6 +18,7 @@ namespace labrab5
 		}
 		public void Plus_age(int plus) { age += plus; }
 		public void Minus_age(int minus) { age -= minus; }
+		public virtual string ReturnPosition() { return "Неизвестно"; }
 		public int Age
 		{
 			set

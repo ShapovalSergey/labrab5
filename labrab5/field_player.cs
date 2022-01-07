@@ -34,6 +34,7 @@ namespace labrab5
 		public field_player(string name1) { Name = name1; }
 		public void Plus_age(int plus) { age += plus; }
 		public void Minus_age(int minus) { base.Minus_age(minus); }
+		public override string ReturnPosition() { return position; }
 		public int Games
 		{
 			set

@@ -33,6 +33,7 @@ namespace labrab5
 			Height = heig1;
 		}
 		public goalkeeper(string name1) { Name = name1; }
+		public override string ReturnPosition() { return "Вратарь"; }
 		public int Games
 		{
 			set
