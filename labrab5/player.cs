@@ -4,13 +4,13 @@ using System.Text;
 
 namespace labrab5
 {
-    public class player
+    public class player:human
     {
         protected string name;
 		protected int age;
 		protected string nation;
-		public player() { }
-		public player(string name1, int age1, string nation1)
+		public player():base(1) { }
+		public player(string name1, int age1, string nation1) : base(1)
 		{
 			name = name1;
 			age = age1;
@@ -39,6 +39,10 @@ namespace labrab5
 		{
 			set { nation = value; }
 			get { return nation; }
+		}
+		public override string CreateStatus() 
+		{
+			return "Профессиональный игрок";
 		}
 	}
 }
