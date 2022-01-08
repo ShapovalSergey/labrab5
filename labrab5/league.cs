@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 namespace labrab5
 {
-	public class league
+	public class league: ILicense
 	{
 
 		private string name;
@@ -61,5 +61,6 @@ namespace labrab5
 			Console.WriteLine(tm.Name+"\n");
 		}
 		public void Vivod() { Console.WriteLine( name+" "+ value_of_teams + " " + years + " " + location+"\n"); }
-    }
+		public void GetLicense() { Console.WriteLine("Лицензия лиги - 123"); }
+	}
 }

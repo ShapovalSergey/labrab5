@@ -4,7 +4,7 @@ using System.Text;
 
 namespace labrab5
 {
-	public class team
+	public class team: ILicense
 	{
 		static int n=0;
 		private string name;
@@ -118,6 +118,8 @@ namespace labrab5
 			}
 			
 			
-			return points; }
-}
+			return points; 
+		}
+		public void GetLicense() { Console.WriteLine("Лицензия команды - 123456789"); }
+	}
 }
