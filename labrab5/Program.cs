@@ -122,7 +122,7 @@ namespace labrab5
             string im;
             Console.WriteLine("Введите название лиги\n");
             im = Console.ReadLine();
-            a.League_name=im;
+            a.Lg.Name=im;
             Console.WriteLine("Введите команду - хозяев\n");
             im = Console.ReadLine();
             a.Home_team=im;
@@ -527,7 +527,7 @@ namespace labrab5
             int check = 1;  int action;game a=new game();
             while (check == 1)
             {
-                    Console.WriteLine("Выберите, что вы хотите сделать\n1)Ввести данные матча\n2)Изменить название лиги\n3)Изменить команду - хозяев\n4)Изменить команду - гостей\n5)Изменить результат матча\n6)Вывести данные матча\n");
+                    Console.WriteLine("Выберите, что вы хотите сделать\n1)Ввести данные матча\n2)Изменить название лиги\n3)Изменить команду - хозяев\n4)Изменить команду - гостей\n5)Изменить результат матча\n6)Вывести данные матча\n7)Выполнить клонирование\n");
                 action = Convert.ToInt32(Console.ReadLine());
                 if (action == 1)
                     {
@@ -538,7 +538,7 @@ namespace labrab5
                         string im;
                         Console.WriteLine("Введите название лиги\n");
                     im = Console.ReadLine();
-                    a.League_name=im;
+                    a.Lg.Name=im;
                     }
                     if (action == 3)
                     {
@@ -565,7 +565,15 @@ namespace labrab5
                     {
                         a.Vivod();
                     }
-                Console.ReadKey();
+                    if (action == 7)
+                    {
+                    game g1 = new game(new league("RPL"),"0-0","Dynamo","Spartak");
+                    a = (game)g1.Clone();
+                    g1.Vivod();
+                    a.Lg.Name = "PFL";
+                    g1.Vivod();
+                }
+                    Console.ReadKey();
                     Console.WriteLine("\nВы хотите продолжить с этим классом? 1 - да, 0 - нет ");
                 check = Convert.ToInt32(Console.ReadLine());
             }
@@ -589,7 +597,7 @@ namespace labrab5
                     i =  Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Введите название лиги\n");
                     im = Console.ReadLine();
-                    a[i-1].League_name = im;
+                    a[i-1].Lg.Name = im;
                 }
                 if (action == 3)
                 {
